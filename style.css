@@ -1,0 +1,124 @@
+/* ==========================================================================
+   DESKTOP STYLES (Default / Large Screens)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header & Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #333;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Content Area (Two Columns) */
+.hero-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+/* Base Responsive Image Rule */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   📱 MOBILE STYLES (Targeting screens 768px wide or smaller)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Reset Navbar to stack links vertically */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* 2. Convert Two-Column Row Layout into a Single Column Stack */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px auto;
+        gap: 30px;
+    }
+
+    /* 3. Reduce sizing so elements fit comfortably on tight screens */
+    .hero-text h1 {
+        font-size: 32px; /* Scale down typography */
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    /* 4. Ensure images or subcontainers take full viewport availability safely */
+    .hero-text, .hero-image {
+        width: 100%;
+    }
+}
